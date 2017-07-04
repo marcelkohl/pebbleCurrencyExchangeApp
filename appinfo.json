@@ -1,0 +1,248 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Developer: Marcel Kohls",
+    "longName": "Currency Exchange",
+    "projectType": "pebblejs",
+    "resources": {
+        "media": [
+            {
+                "file": "images/menu_icon.png",
+                "name": "IMAGE_MENU_ICON",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/logo_splash.png",
+                "name": "IMAGE_LOGO_SPLASH",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/tile_splash.png",
+                "name": "IMAGE_TILE_SPLASH",
+                "type": "bitmap"
+            },
+            {
+                "file": "fonts/UbuntuMono-Regular.ttf",
+                "name": "MONO_FONT_14",
+                "type": "font"
+            },
+            {
+                "file": "images/CLP.png",
+                "name": "IMAGES_CLP_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/PEN.png",
+                "name": "IMAGES_PEN_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/ZAR.png",
+                "name": "IMAGES_ZAR_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/USD.png",
+                "name": "IMAGES_USD_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/TRY.png",
+                "name": "IMAGES_TRY_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/THB.png",
+                "name": "IMAGES_THB_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/SGD.png",
+                "name": "IMAGES_SGD_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/SEK.png",
+                "name": "IMAGES_SEK_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/RUB.png",
+                "name": "IMAGES_RUB_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/RON.png",
+                "name": "IMAGES_RON_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/PLN.png",
+                "name": "IMAGES_PLN_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/PHP.png",
+                "name": "IMAGES_PHP_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/NZD.png",
+                "name": "IMAGES_NZD_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/NOK.png",
+                "name": "IMAGES_NOK_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/MYR.png",
+                "name": "IMAGES_MYR_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/MXN.png",
+                "name": "IMAGES_MXN_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/KRW.png",
+                "name": "IMAGES_KRW_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/JPY.png",
+                "name": "IMAGES_JPY_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/INR.png",
+                "name": "IMAGES_INR_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/ILS.png",
+                "name": "IMAGES_ILS_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/IDR.png",
+                "name": "IMAGES_IDR_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/HUF.png",
+                "name": "IMAGES_HUF_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/HRK.png",
+                "name": "IMAGES_HRK_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/HKD.png",
+                "name": "IMAGES_HKD_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/GBP.png",
+                "name": "IMAGES_GBP_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/EUR.png",
+                "name": "IMAGES_EUR_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/DKK.png",
+                "name": "IMAGES_DKK_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/CZK.png",
+                "name": "IMAGES_CZK_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/CNY.png",
+                "name": "IMAGES_CNY_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/CHF.png",
+                "name": "IMAGES_CHF_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/CAD.png",
+                "name": "IMAGES_CAD_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/BGN.png",
+                "name": "IMAGES_BGN_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/AUD.png",
+                "name": "IMAGES_AUD_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/BRL.png",
+                "name": "IMAGES_BRL_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/currency32.png",
+                "name": "IMAGES_CURRENCY32_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/currency-black.png",
+                "menuIcon": true,
+                "name": "IMAGES_CURRENCY_BLACK_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/garbage.png",
+                "name": "IMAGES_GARBAGE_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/check.png",
+                "name": "IMAGES_CHECK_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/cancel.png",
+                "name": "IMAGES_CANCEL_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/currency.png",
+                "name": "IMAGES_CURRENCY_PNG",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Currency Exchange",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "65fb0435-d604-4331-9876-2fa44b02b219",
+    "versionCode": 1,
+    "versionLabel": "2.3",
+    "watchapp": {
+        "hiddenApp": false,
+        "watchface": false
+    }
+}
