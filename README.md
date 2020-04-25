@@ -5,6 +5,9 @@
 
 # Currency Exchange for Pebble
 Currency Exchange is a Pebble app build with CloudPebble.net to easily keep track on exchange.
+It uses [yahoo finance API](https://finance.yahoo.com/quotes/API,Documentation/view/v1/) to get the actual currency set up.
+
+The app allows to add, remove and set the preferred currency so the user can compare all the currency together;
 
 ![Screenshot 01](https://github.com/marcelkohl/pebbleCurrencyExchangeApp/blob/master/package/aplite_0.png?raw=true)
 ![Screenshot 02](https://github.com/marcelkohl/pebbleCurrencyExchangeApp/blob/master/package/aplite_1.png?raw=true)
