@@ -3,7 +3,7 @@
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
 
-# Currency Exchange for Pebble
+# Currency Exchange for Pebble Watch
 Currency Exchange is a Pebble app build with CloudPebble.net to easily keep track on exchange.
 It uses [yahoo finance API](https://finance.yahoo.com/quotes/API,Documentation/view/v1/) to get the actual currency set up.
 
