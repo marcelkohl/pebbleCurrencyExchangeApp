@@ -1,1 +1,6 @@
-.sonarlint
+.DS_Store
+*.pyc
+/.lock-*
+/build/
+/out/
+build
