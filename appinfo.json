@@ -203,6 +203,11 @@
         "type": "png"
       },
       {
+        "file": "images/currency64.png",
+        "name": "IMAGES_CURRENCY64_PNG",
+        "type": "png"
+      },
+      {
         "file": "images/currency-black-wbg.png",
         "menuIcon": true,
         "name": "IMAGES_CURRENCY_BLACK_WBG_PNG",
@@ -244,7 +249,7 @@
   ],
   "uuid": "65fb0435-d604-4331-9876-2fa44b02b219",
   "versionCode": 1,
-  "versionLabel": "3.2",
+  "versionLabel": "3.4",
   "watchapp": {
     "watchface": false
   }

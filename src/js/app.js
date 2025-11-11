@@ -1,21 +1,30 @@
 var UI = require('ui');
 var Feature = require('platform/feature');
+var createSplash = require('./splash');
+var wait = require('./wait');
+
 var curAvailable = ["AUD", "BGN", "BRL", "CAD", "CHF", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HRK", "HUF", "IDR", "ILS", "INR", "ISK", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PLN", "RON", "RUB", "SEK", "SGD", "THB", "TRY", "USD", "ZAR"]
 var curAvailableDescr = ["Australian Dollar", "Bulgarian Lev", "Brazilian Real", "Canadian Dollar", "Swiss Franc", "Chinese Yuan", "Czech Koruna", "Danish Krone", "Euro", "British Pound", "Hong Kong Dollar", "Croatian Kuna", "Hungarian Forint", "Indonesian Rupiah", "Israeli New Sheqel", "Indian Rupee", "Icelandic Krona", "Japanese Yen", "South Korean Won", "Mexican Peso", "Malaysian Ringgit", "Norwegian Krone", "New Zealand Dollar", "Philippine Peso", "Polish Zloty", "Romanian Leu", "Russian Ruble", "Swedish Krona", "Singapore Dollar", "Thai Baht", "Turkish Lira", "United States Dollar", "South African Rand"];
 var gItemToRemove = null;
+
 const { requestCurrencies } = require('./currency-api');
 
-var splash = new UI.Card({
+var splash = createSplash({
   title: 'Currency Exchange',
-  titleColor: 'white',
-  icon: 'images/currency32.png',
-  subtitle: '\nMulti Currency Converter',
-  body: 'Loading...',
-  backgroundColor: Feature.color('0x0055FF', 'gray'),
-  style: 'small'
+  subtitle: 'Multi Currency Converter',
+  iconPath: 'images/currency32.png',
+  loadingText: 'Loading...'
 });
 
 splash.show();
+
+var waitWindow = wait(3000, 'Updating list...');
+let waitOnStart = function () {
+  waitWindow.show();
+}
+let waitOnEnd = function () {
+  waitWindow.stop();
+}
 
 var menuCurrency = new UI.Menu();
 var menuListBaseCurr = new UI.Menu();
@@ -38,9 +47,8 @@ removeItem.on('click', 'up', function(e) {
   deleteItemCurr();
 });
 
-function loadCurrencies(){
-  splash.body('Requesting data...');
-  splash.backgroundColor(Feature.color('0x0055FF', 'gray'));
+function loadCurrencies(onStart, onUpdate, onEnd){
+  onStart()
 
   var idxToAdd, currSymb, currValue, idxBase;
   var currBase = localStorage.getItem('currBase');
@@ -79,20 +87,23 @@ function loadCurrencies(){
       setMenuCurrencyActs();
 
       menuCurrency.show();
-      splash.hide();
+      onEnd()
       removeItem.hide();
       menuListBaseCurr.hide();
     },
     function (error) {
-      splash.body('Failed to query currencies');
-      splash.backgroundColor(Feature.color('0x0055FF', 'gray'));
-      setTimeout(function () { loadCurrencies(); }, 3000);
+      onUpdate(error)
+      setTimeout(function () { loadCurrencies(onStart, onUpdate, onEnd); }, 3000);
     }
   )
 }
 
 setTimeout(function() {
-  loadCurrencies();
+  let onStart = function(){splash.setLoading('Requesting data...')}
+  let onUpdate = function(d){splash.setLoading('Failed to query currencies')}
+  let onEnd = function () {splash.hide();}
+
+  loadCurrencies(onStart, onUpdate, onEnd);
 }, 400);
 
 function deleteItemCurr(){
@@ -103,7 +114,7 @@ function deleteItemCurr(){
 
   menuCurrency.hide();
   saveMyCurrenciesArray(lMyCurrencies);
-  loadCurrencies();
+  loadCurrencies(waitOnStart, function(){}, waitOnEnd);
 }
 
 function getMyCurrenciesArray(){
@@ -164,7 +175,7 @@ function addCurrency(e){
     AddToMyCurrenciesArray(e.item.title);
 
     menuCurrency.hide();
-    loadCurrencies();
+    loadCurrencies(waitOnStart, function () { }, waitOnEnd);
   }
 }
 
@@ -173,7 +184,7 @@ function setBaseCurrency(e){
   if (idxNewCurr >= 0){
     menuCurrency.hide();
     localStorage.setItem('currBase', curAvailable[idxNewCurr]);
-    loadCurrencies();
+    loadCurrencies(waitOnStart, function () { }, waitOnEnd);
   }
 }
 

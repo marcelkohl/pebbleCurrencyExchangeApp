@@ -12,6 +12,10 @@ The app allows to add, remove and set the preferred currency so the user can com
 ![Screenshot 02](https://github.com/marcelkohl/pebbleCurrencyExchangeApp/blob/master/package/aplite_1.png?raw=true)
 ![Screenshot 03](https://github.com/marcelkohl/pebbleCurrencyExchangeApp/blob/master/package/aplite_2.png?raw=true)
 
+## Requirement
+Pebble Tool v5.0.12
+SDK: v4.5
+
 ## Build
 - Follow instructions on [developer.rebble.io/sdk/](https://developer.rebble.io/sdk/)
 
